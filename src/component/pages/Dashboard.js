@@ -138,7 +138,7 @@ export default function Dashboard() {
             </div>
           </div>
           <div className="row m-t-2">
-            <div className="col-lg-4 col-md-4 col-sm-12 col-12">
+            <div className="col-lg-4 col-md-12 col-sm-12 col-12">
               <div className="dashboard__box-total pa-1">
                 <div className="row">
                   <div className="col-lg-6 col-md-6">
@@ -159,7 +159,7 @@ export default function Dashboard() {
                     </div>
                   </div>
 
-                  <div className="col-lg-5 col-md-5 col-sm-12 col-12">
+                  <div className="col-lg-6 col-md-12 col-sm-12 col-12">
                     <div className="d-f j-c-s-b row m-t-0_5">
                       <div className="col-2">
                         <div className="rectangle-p"></div>
@@ -236,14 +236,25 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-8 col-md-8 col-sm-12 col-12">
+            <div className="col-lg-8 col-md-8 col-sm-12 col-12 perfo">
               <div className="dashboard__box-perfomance pa-1">
                 <div className="font-f f-s-1_5">Performance</div>
                 <div className="m-t-3 b-c-t"><Donut_Chart/></div>
                 <div className="row">
-                  <div className="col-8"></div>
+                  <div className="col-8">
+                  <Datetabs />
+                   <div className="t-a-c">
+                        <div className="font-f f-s-1_3">Monthly</div>
+                        <div className="font-f m-t-0_5">$17,089.33</div>
+                        <div className="m-t-1 m-b-1"> <span className="m-l-0_5 tab f-w-600">
+                        <IoIosAddCircle className="icons-io m-r-0_3" />
+                        67.08%
+                      </span></div>
+                      <span className="font-f m-t-1">Your mining growth <br/>is 67% this month</span>
+                      </div>
+                  </div>
                   <div className="col-4">
-                    <Datetabs />
+                    
                   </div>
                 </div>
               </div>
@@ -455,6 +466,10 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
+            
+            
+
+            
             <div></div>
             </div>
             </div>

@@ -2,3 +2,25 @@ div#rc-tabs-1-tab-1 {
     color: #fff;
     font-family: 'Inter', sans-serif !important;
 }
+div#rc-tabs-1-tab-2 {
+    color: #fff;
+    font-family: "Inter", sans-serif !important;
+}
+div#rc-tabs-1-tab-3 {
+    color: #fff;
+    font-family: "Inter", sans-serif !important;
+}
+div#rc-tabs-1-tab-4 {
+    color: #fff;
+    font-family: "Inter", sans-serif !important;
+}
+
+:where(.css-dev-only-do-not-override-k7429z).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    
+    border-radius: 5px;
+    padding: 2px;
+    background: rgba(108, 114, 141, 1);
+
+    // color: #1677ff;
+    text-shadow: 0 0 0.25px currentcolor;
+}
