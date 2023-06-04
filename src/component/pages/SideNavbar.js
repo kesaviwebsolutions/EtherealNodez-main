@@ -31,34 +31,35 @@ export default function SideNavbar() {
 
   useLayoutEffect(() => {
     const data = window.localStorage.getItem("theme");
-    if (data === "light-theme") {
-      setTheme("light-theme");
-    } else {
+    if (data === "dark-theme") {
       setTheme("dark-theme");
+    } else {
+      setTheme("light-theme");
     }
   }, []);
-
-  const [theme, setTheme] = useState("dark-theme");
+  
+  const [theme, setTheme] = useState("light-theme"); // Change the initial state value
+  
   const toggleThemelight = () => {
-    theme === "dark-theme" ? setTheme("light-theme") : setTheme("light-theme");
+    theme === "dark-theme" ? setTheme("light-theme") : setTheme("dark-theme");
     window.localStorage.setItem(
       "theme",
-      theme === "dark-theme" ? "light-theme" : "light-theme"
+      theme === "dark-theme" ? "light-theme" : "dark-theme"
     );
-    // window.location.reload();
   };
+  
   const toggleThemedark = () => {
     theme === "dark-theme" ? setTheme("dark-theme") : setTheme("dark-theme");
     window.localStorage.setItem(
       "theme",
       theme === "dark-theme" ? "dark-theme" : "dark-theme"
     );
-    // window.location.reload();
   };
-
+  
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
+  
   return (
     <>
       <div className="">
