@@ -166,7 +166,7 @@ function Navbar() {
             <div className="image-dog1">
               <a href="/" target="_blank">
                 <img src={logo} alt="" className="" />
-                <span className="m-r-2 c-p f-s-1_5 c-b f-w-600 m-l-0_5 font-f">
+                <span className="m-r-2 c-p f-s-1_5  f-w-600 m-l-0_5 font-f">
                   EtherealNodez
                 </span>
               </a>
@@ -222,7 +222,7 @@ function Navbar() {
                     </li>
                   </NavLink>
                 </ul>
-                <div className="sidebar__bottom m-l-0 ps-a b-o-1">
+              {/*   <div className="sidebar__bottom m-l-0 ps-a b-o-1">
                   <ul className="l-s-t-n">
                     <li>
                       <input
@@ -238,7 +238,7 @@ function Navbar() {
                     </li>
                     <li></li>
                   </ul>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
