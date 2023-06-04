@@ -12,6 +12,7 @@ import history from "../Image/HistoryVector.png";
 import top from "../Image/TopVector.png";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import Form from 'react-bootstrap/Form';
 
 export default function SideNavbar() {
   const [show, setShow] = useState(false);
@@ -117,31 +118,23 @@ export default function SideNavbar() {
                       {theme != "dark-theme" ? (
                         <span onClick={() => toggleThemedark()} className="">
                           light theme
-                         {/*  <input
-                            type="checkbox"
-                            id="darkmode-toggle"
-                            value="dark mode"
-                            className="input"
-                          />
-                         */}
+                       
                         </span>
                       ) : (
                           <span onClick={() => toggleThemelight()} className="">
                             dark theme
-                         {/*  <input
-                            type="checkbox"
-                            id="darkmode-toggle"
-                            value="dark mode"
-                            className="input"
-                          />
-                          <label
-                            for="darkmode-toggle"
-                            className="label"
-                          ></label> */}
+                        
                         </span>
                       )}
                     </li>
-                    <li></li>
+                    <li><Form>
+                    <Form.Check // prettier-ignore
+                      type="switch"
+                      id="custom-switch"
+                     
+                    />
+                  
+                  </Form></li>
                   </ul>
                 </div>
               </div>
