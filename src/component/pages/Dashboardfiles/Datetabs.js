@@ -30,7 +30,7 @@ export default function Datetabs() {
   ];
   return (
     <div>
-      <div className="d-f a-i-c f-f-int m-b-2">
+      <div className="d-f a-i-c f-f-int m-b-2 c-p">
         <div className="m-l-0_5 f-f-int">Day</div>
         
         <div className="m-l-0_5 f-f-int">Week</div>
