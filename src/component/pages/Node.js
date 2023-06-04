@@ -1,19 +1,78 @@
 import { Grid } from "@mui/material";
-import React from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import SideNavbar from "./SideNavbar";
 import mini from "../Image/G1.png";
-import { FaExchangeAlt } from "react-icons/fa";
+import { FaExchangeAlt, FaMoon, FaSun } from "react-icons/fa";
 import { IoIosAddCircleOutline } from "react-icons/io";
 
 export default function Node() {
+
+  // ---------dark---------mode----------------
+
+  useLayoutEffect(() => {
+    const data = window.localStorage.getItem("theme");
+    if (data === "dark-theme") {
+      setTheme("dark-theme");
+    } else {
+      setTheme("light-theme");
+    }
+  }, []);
+
+  const [theme, setTheme] = useState("light-theme"); // Change the initial state value
+
+  const toggleThemelight = () => {
+    theme === "dark-theme" ? setTheme("light-theme") : setTheme("dark-theme");
+    window.localStorage.setItem(
+      "theme",
+      theme === "dark-theme" ? "light-theme" : "dark-theme"
+    );
+  };
+
+  const toggleThemedark = () => {
+    theme === "dark-theme" ? setTheme("dark-theme") : setTheme("dark-theme");
+    window.localStorage.setItem(
+      "theme",
+      theme === "dark-theme" ? "dark-theme" : "dark-theme"
+    );
+  };
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
+
   return (
     <>
       <div>
-        <Grid container>
-        <Grid item xs={12} sm={12} md={12} lg={3} xl={2} m-q-b-d-n>
+      <Grid container>
+      <Grid
+        item
+        xs={12}
+        sm={12}
+        md={12}
+        lg={3}
+        xl={2}
+        className="bgs-primary m-q-b-d-n "
+      >
         <SideNavbar />
       </Grid>
-      <Grid item xs={12} sm={12} md={12} lg={9} xl={10} className="">
+          <Grid item xs={12} sm={12} md={12} lg={9} xl={10} className="">
+          <div className="container-kws">
+          <div className="d-f j-c-s-b a-i-c m-t-2 m-q-a-d-n">
+            <div className="f-s-2 f-w-600 f-f-int">Node</div>
+            <div className="">
+              {" "}
+              {theme != "dark-theme" ? (
+                <span onClick={() => toggleThemedark()} className="">
+                  <FaMoon className="f-s-1_5" />
+                </span>
+              ) : (
+                <span onClick={() => toggleThemelight()} className="">
+                  <FaSun className="f-s-1_5" />
+                </span>
+              )}
+            </div>
+          </div>
             <div className="dashboard__box m-t-2">
               <div className="pa-1">
                 <div className="font-f f-s-1_3">Pending Withdrwals</div>
@@ -221,7 +280,8 @@ export default function Node() {
                   </div>
                 </div>
               </div>
-            </div>
+              </div>
+              </div>
           </Grid>
         </Grid>
       </div>
