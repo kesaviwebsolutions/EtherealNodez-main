@@ -1,0 +1,76 @@
+.sidebar{
+
+    background-color: var(--primary_bg);
+    padding: 30px 20px;
+    flex-shrink: 0;
+    height: 100vh;
+    overflow: visible;
+    position: sticky;
+    top: 0;
+&__inner{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+    &__tabs{
+        background: var(--second_bg) !important;
+    border-radius: 10px !important;
+    display: block;
+    }
+   
+}
+
+.side-bg{
+    // padding: 1px !important;
+    margin-right: 30px !important;
+    overflow: visible;
+    position: sticky;
+    top: 0;
+}
+.navbar12{
+    background: var(--primary_bg) ;
+}
+
+/* Toggle-Button */
+.label{
+    width: 80px;
+    height: 30px;
+    position: relative;
+    display: block;
+    background: #ebebeb;
+    border-radius: 20px;
+    box-shadow: inset 0px 5px 15px rgba(0,0,0,0.4), inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.label:after{
+    content: "";
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 3px;
+    left: 5px;
+    background: linear-gradient(180deg, #ffcc89, #d8860b);
+    border-radius: 18px;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+.input{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+.input:checked + .label {
+    background: #242424;
+}
+.input:checked + .label:after{
+    left: 72px;
+    transform: translateX(-100%);
+    background: linear-gradient(180deg, #777, #3a3a3a);
+}
+.label, .label:after{
+    transition: 0.3s;
+}
+.label:active:after{
+    width: 40px;
+}

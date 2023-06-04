@@ -1,0 +1,41 @@
+.box-co{
+    // background-color: #000 !important;
+    padding: 10px ;
+    border-radius: 10px ;
+}
+.withdrwal{
+    background: rgba(0, 233, 0, 1);
+    padding: 3px;
+    border: none;
+    border-radius: 5px ;
+}
+.exchange{
+    margin-top: 0px !important;
+}
+.create-ic{
+    background: transparent !important;
+    font-weight: 900 !important;
+}
+@media screen and (max-width: 520px){
+    .exchagne{
+        display: none !important;
+    }
+    .real{
+        display: none !important;
+    }
+}
+@media screen and (min-width: 520px) {
+    .real-mo{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 476px){
+    .logoname{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 355px) {
+    .mini-img{
+        display: none !important;
+    }
+}

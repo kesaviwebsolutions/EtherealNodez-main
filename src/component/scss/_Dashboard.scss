@@ -1,0 +1,149 @@
+.dashboard{
+&__box{
+//     width: 300px !important;
+// height: 200px !important;
+
+background: var(--primary_bg);
+border-radius: 10px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+&__box-total{
+   
+background: var(--primary_bg);
+border-radius: 10px;
+}
+&__box-perfomance{
+    background: var(--primary_bg);
+border-radius: 10px;
+
+
+}
+}
+
+.toggle-buttons{
+    background: #b7c5f53b !important;
+border-radius: 3px !important;
+padding: 1rem !important;
+border: 1px solid #b7c5f53b !important;
+}
+.tab{
+    background: #87F585;
+    padding: 3px 5px;
+    border-radius: 10px;
+    color: #0a8d0a;
+}
+.icons-io{
+    background: transparent !important;
+    color: #0a8d0a !important;
+}
+
+.rectangle-p{
+    width: 15px;
+    height: 15px;
+    background: #E21F65;
+    border-radius: 3px;
+}
+.rectangle-s{
+    width: 15px;
+    height: 15px;
+    background: #B7C5F5;
+    border-radius: 3px;
+}
+.rectangle-h{
+    width: 15px;
+    height: 15px;
+    background: #F3F585;
+    border-radius: 3px;
+}
+.rectangle-m{
+    width: 15px;
+    height: 15px;
+    background: #489D86;
+    border-radius: 3px;
+}
+.rectangle-ep{
+    width: 15px;
+    height: 15px;
+    background: #3D13B6;
+    border-radius: 3px;
+}
+.rectangle-em{
+    width: 15px;
+    height: 15px;
+    background: #00CF00;
+    border-radius: 3px;
+}
+.gr-icon{
+    background: #fff !important;
+    font-size: 1.5rem;
+    font-weight: 800 !important;
+    border: 1px solid #000;
+    border-radius: 25px;
+    
+}
+.mini-node-icons{
+    background: transparent !important;
+    // margin-top: 3px !important;
+}
+.mini-node-icons-ex{
+    background: transparent !important;
+    margin-top: -5px;
+}
+.detail{
+    background: #6C728D ;
+    color: #fff;
+    border: none;
+    padding: 2px;
+    border-radius: 5px;
+}
+.section-dashboard{
+    background: var(--primary_bg);
+border-radius: 10px;
+}
+.cir-img{
+    width: 17px;
+}
+.tab-sec{
+    background: grey;
+    border-radius: 5px;
+    padding: 5px;
+}
+@media screen and (min-width: 660px) {
+    .mini-node-icons-ex{
+        display: none;
+    }
+}
+@media screen and (max-width: 660px) {
+    .section-port{
+        display: none !important;
+    }
+}
+@media screen and (min-width: 660px) {
+    .section-port-two{
+        display: none;
+    }
+}
+@media screen and (max-width: 333px) {
+    .cir-img{
+        display: none;
+    }
+}
+@media screen and (max-width: 767px) {
+    .dashboard__box-perfomance{
+        margin-top: 2rem !important;
+    }
+    .dashboard__box-total{
+        margin-top: 2rem !important;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .dashboard{
+        margin-top: 1rem;
+    }
+}
