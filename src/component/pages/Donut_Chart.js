@@ -3,16 +3,16 @@ import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'r
 
 const AreaChartComponent = () => {
   const data = [
-    { name: 'Label 1', data: 4 },
-    { name: 'Label 2', data: 2 },
-    { name: 'Label 3', data: 3 },
-    { name: 'Label 4', data: 3 },
-    { name: 'Label 5', data: 2 },
-    { name: 'Label 6', data: 1 },
+    { name: 'Jan', data: 40000 },
+    { name: 'Feb', data: 20000 },
+    { name: 'Mar', data: 30000 },
+    { name: 'Apr', data: 30000 },
+    { name: 'May', data: 20000 },
+    { name: 'Jun', data: 10000 },
   ];
 
   return (
-    <AreaChart width={320} height={200} data={data} className='b-c-t'>
+    <AreaChart width={350} height={200} data={data} className='b-c-t' >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
       <YAxis />

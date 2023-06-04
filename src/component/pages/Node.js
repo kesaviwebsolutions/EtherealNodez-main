@@ -10,10 +10,10 @@ export default function Node() {
     <>
       <div>
         <Grid container>
-          <Grid item xs={12} sm={12} md={12} lg={3} m-q-b-d-n>
-            <SideNavbar />
-          </Grid>
-          <Grid item xs={12} sm={12} md={12} lg={9}>
+        <Grid item xs={12} sm={12} md={12} lg={3} xl={2} m-q-b-d-n>
+        <SideNavbar />
+      </Grid>
+      <Grid item xs={12} sm={12} md={12} lg={9} xl={10} className="">
             <div className="dashboard__box m-t-2">
               <div className="pa-1">
                 <div className="font-f f-s-1_3">Pending Withdrwals</div>

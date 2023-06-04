@@ -10,11 +10,10 @@ export default function Wallet() {
     <>
     <div className=''>
     <Grid container>
-    <Grid item xs={12} sm={12} md={12} lg={3} m-q-b-d-n>
-    <SideNavbar/>
-    </Grid>
-    
-    <Grid item xs={12} sm={12} md={12} lg={9}>
+    <Grid item xs={12} sm={12} md={12} lg={3} xl={2} m-q-b-d-n>
+    <SideNavbar />
+  </Grid>
+  <Grid item xs={12} sm={12} md={12} lg={9} xl={10} className="">
     <div className="row m-t-2">
             <div className="col-lg-4 col-md-6 col-sm-12 col-12">
               <div className="dashboard">

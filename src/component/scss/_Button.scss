@@ -39,3 +39,17 @@ border-radius: 50px;
 background: #8A1367;
 border: 1px solid #269EE1;
 }
+ #dropdown-basic {
+    margin: 0 !important;
+    padding: 5px !important;
+    border: none !important;
+}
+svg.recharts-surface{
+    background-color: transparent !important;
+}
+:where(.css-dev-only-do-not-override-k7429z).ant-tabs-top >.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-k7429z).ant-tabs-bottom >.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-k7429z).ant-tabs-top >div>.ant-tabs-nav::before, :where(.css-dev-only-do-not-override-k7429z).ant-tabs-bottom >div>.ant-tabs-nav::before{
+    border: none !important;
+}
+.ant-tabs-ink-bar.ant-tabs-ink-bar-animated{
+    background: transparent !important;
+}
