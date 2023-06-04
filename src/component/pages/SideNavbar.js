@@ -13,7 +13,7 @@ import pending from "../Image/PendingVector.png";
 import history from "../Image/HistoryVector.png";
 import top from "../Image/TopVector.png";
 import { Link, NavLink } from "react-router-dom";
-import { FaBars, FaHistory, FaWallet } from "react-icons/fa";
+import { FaBars, FaHistory, FaMoon, FaSun, FaWallet } from "react-icons/fa";
 import Form from "react-bootstrap/Form";
 
 export default function SideNavbar() {
@@ -143,24 +143,17 @@ export default function SideNavbar() {
                 <div className="sidebar__bottom m-l-0 ps-a b-o-4 t-a-c p-r-3 w-100">
                   <ul className="l-s-t-n">
                     <li>
-                      {theme != "dark-theme" ? (
-                        <span onClick={() => toggleThemedark()} className="">
-                          dark theme
-                        </span>
-                      ) : (
-                        <span onClick={() => toggleThemelight()} className="">
-                        light theme
-                        </span>
-                      )}
+                    {theme != "dark-theme" ? (
+                      <span onClick={() => toggleThemedark()} className="">
+                        <FaMoon  className="f-s-1_5"  />
+                      </span>
+                    ) : (
+                      <span onClick={() => toggleThemelight()} className="">
+                      <FaSun className="f-s-1_5" />
+                      </span>
+                    )}
                     </li>
-                    <li>
-                      <Form>
-                        <Form.Check // prettier-ignore
-                          type="switch"
-                          id="custom-switch"
-                        />
-                      </Form>
-                    </li>
+                   
                   </ul>
                 </div>
               </div>

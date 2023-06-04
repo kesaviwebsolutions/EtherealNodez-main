@@ -1,22 +1,59 @@
-import React from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { Grid } from "@mui/material";
 import SideNavbar from "./SideNavbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import { IoIosAddCircle, IoIosAddCircleOutline } from "react-icons/io";
-import { FaExchangeAlt } from "react-icons/fa";
+import { FaExchangeAlt, FaMoon, FaSun } from "react-icons/fa";
 import eyevector from "../Image/EyeVector.png";
 import Donut_Chart from "./Donut_Chart";
 import Chart from "./Chart";
 import { GrAddCircle } from "react-icons/gr";
 import Datetabs from "./Dashboardfiles/Datetabs";
 import Datetabs1 from "./Dashboardfiles/Datetabs1";
+import BsFillMoonFill from "react-icons/bs";
 import mini from "../Image/G1.png";
 import mini2 from "../Image/G2.png";
 import mini3 from "../Image/G3.png";
 import mini4 from "../Image/G4.png";
 import Form from "react-bootstrap/Form";
+import DarkMode from "./DarkMode";
 
 export default function Dashboard() {
+
+  // ---------dark---------mode----------------
+
+  useLayoutEffect(() => {
+    const data = window.localStorage.getItem("theme");
+    if (data === "dark-theme") {
+      setTheme("dark-theme");
+    } else {
+      setTheme("light-theme");
+    }
+  }, []);
+
+  const [theme, setTheme] = useState("dark-theme");
+  const toggleThemelight = () => {
+    theme === "dark-theme" ? setTheme("light-theme") : setTheme("light-theme");
+    window.localStorage.setItem(
+      "theme",
+      theme === "dark-theme" ? "light-theme" : "light-theme"
+    );
+    // window.location.reload();
+  };
+  const toggleThemedark = () => {
+    theme === "dark-theme" ? setTheme("dark-theme") : setTheme("dark-theme");
+    window.localStorage.setItem(
+      "theme",
+      theme === "dark-theme" ? "dark-theme" : "dark-theme"
+    );
+    // window.location.reload();
+  };
+
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
+
   return (
     <div className="">
       <Grid container>
@@ -32,7 +69,20 @@ export default function Dashboard() {
           <SideNavbar />
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={9} xl={10} className="">
+          
           <div className="container-kws">
+            <div className="d-f j-c-s-b a-i-c m-t-2 m-q-a-d-n">
+              <div className="f-s-2 f-w-600 f-f-int">Dashboard</div>
+              <div className=""> {theme != "dark-theme" ? (
+                <span onClick={() => toggleThemedark()} className="">
+                  <FaMoon  className="f-s-1_5"  />
+                </span>
+              ) : (
+                <span onClick={() => toggleThemelight()} className="">
+                <FaSun className="f-s-1_5" />
+                </span>
+              )}</div>
+            </div>
             <div className="row m-t-2">
               <div className="col-lg-4 col-md-6 col-sm-6 col-6 m-y-1">
                 <div className="dashboard h-100">
