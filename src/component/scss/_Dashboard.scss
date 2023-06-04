@@ -133,23 +133,3 @@ border-radius: 10px;
         display: none;
     }
 }
-@media screen and (max-width: 767px) {
-    .dashboard__box-perfomance{
-        margin-top: 2rem !important;
-    }
-    .dashboard__box-total{
-        margin-top: 2rem !important;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .dashboard{
-        margin-top: 1rem;
-    }
-   
-}
-@media screen and (max-width: 991px) {
-    .perfo{
-        margin-top: 1rem !important;
-    }
-}
