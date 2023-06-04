@@ -9,6 +9,7 @@ import Donut_Chart from "./Donut_Chart";
 import Chart from "./Chart";
 import { GrAddCircle } from "react-icons/gr";
 import Datetabs from "./Dashboardfiles/Datetabs";
+import Datetabs1 from "./Dashboardfiles/Datetabs1";
 import mini from "../Image/G1.png";
 import mini2 from "../Image/G2.png";
 import mini3 from "../Image/G3.png";
@@ -19,17 +20,25 @@ export default function Dashboard() {
   return (
     <div className="">
       <Grid container>
-        <Grid item xs={12} sm={12} md={12} lg={3} xl={2} className="bgs-primary m-q-b-d-n ">
+        <Grid
+          item
+          xs={12}
+          sm={12}
+          md={12}
+          lg={3}
+          xl={2}
+          className="bgs-primary m-q-b-d-n "
+        >
           <SideNavbar />
         </Grid>
         <Grid item xs={12} sm={12} md={12} lg={9} xl={10} className="">
           <div className="container-kws">
             <div className="row m-t-2">
               <div className="col-lg-4 col-md-6 col-sm-6 col-6 m-y-1">
-                <div className="dashboard">
-                  <div className="dashboard__box pa-2">
+                <div className="dashboard h-100">
+                  <div className="dashboard__box pa-2 h-100">
                     <div className="d-f j-c-s-b">
-                      <div className="font-f f-s-1_5 gray-clr">
+                      <div className="font-f s-f-s-2 gray-clr">
                         Available Balance
                       </div>
                       <Dropdown className="b-n">
@@ -75,10 +84,10 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-6 col-6 m-y-1">
-                <div className="dashboard">
-                  <div className="dashboard__box pa-2">
+                <div className="dashboard h-100">
+                  <div className="dashboard__box pa-2 h-100">
                     <div className="d-f j-c-s-b">
-                      <div className="font-f f-s-1_5 gray-clr">
+                      <div className="font-f s-f-s-2 gray-clr">
                         Total Earnings
                       </div>
                       <Dropdown className="b-n">
@@ -124,10 +133,10 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="col-lg-4 col-md-6 col-sm-6 col-6 m-y-1">
-                <div className="dashboard">
-                  <div className="dashboard__box pa-2">
+                <div className="dashboard h-100">
+                  <div className="dashboard__box pa-2 h-100">
                     <div className="d-f j-c-s-b">
-                      <div className="font-f f-s-1_5 gray-clr">Mining Rate</div>
+                      <div className="font-f s-f-s-2 gray-clr">Mining Rate</div>
                       <Dropdown className="b-n">
                         <Dropdown.Toggle
                           variant="success"
@@ -170,119 +179,131 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-           
-       
+
               <div className="col-lg-4 col-md-6 col-sm-6 col-6 m-y-1">
-                <div className="dashboard__box-total pa-1">
+                <div className="dashboard__box-total pa-1 h-100">
                   <div className="row">
-                    <div className="col-lg-6 col-md-6">
+                    <div className="col-lg-6 col-md-6 col-sm-6 col">
                       <div>
-                        <div className="font-f f-s-1_5">Total Node</div>
+                        <div className="font-f s-f-s-2">Total Node</div>
                       </div>
                       <div>
                         <div className="d-f a-i-c">
                           <div className="">
-                            <h1 className="font-f f-s-4 m-t-0_5">15</h1>
+                            <div className="font-f s-f-s-3 m-t-0_5">15</div>
                           </div>
                         </div>
                       </div>
-                      <div className="d-f m-t-5">
-                        <GrAddCircle className="gr-icon" />
-                        <div className="m-l-0_5 font-f">Create New Node</div>
-                      </div>
                     </div>
 
-                    <div className="col-lg-6 col-md-12 col-sm-12 col-12">
-                      <div className="d-f j-c-s-b row m-t-0_5">
-                        <div className="col-2">
-                          <div className="rectangle-p"></div>
+                    <div className="col-lg-6 col-md-6 col-sm-6 col">
+                      <div className="d-f j-c-s-b m-t-0_5">
+                        <div className="d-f a-i-c">
+                          <div className="">
+                            <div className="rectangle-p"></div>
+                          </div>
+                          &nbsp;
+                          <div className="">
+                            <span className="font-f">Mini</span>{" "}
+                          </div>
                         </div>
-                        <div className="col-8">
-                          <span className="font-f">Mini</span>{" "}
-                        </div>
-                        <div className="col-2">
+                        <div className="">
                           <span className="f-r font-f">2</span>
                         </div>
                       </div>
                       <div className="d-f j-c-s-b m-t-0_5">
-                        <div className="col-2">
-                          <div className="rectangle-s"></div>
+                        <div className="d-f a-i-c">
+                          <div className="">
+                            <div className="rectangle-s"></div>
+                          </div>
+                          &nbsp;
+                          <div className="">
+                            <span className="font-f">Standard</span>{" "}
+                          </div>
                         </div>
-                        <div className="col-8">
-                          <span className="font-f">Standard</span>
-                        </div>{" "}
-                        <div className="col-2">
-                          {" "}
+                        <div className="">
                           <span className="f-r font-f">2</span>
                         </div>
                       </div>
                       <div className="d-f j-c-s-b m-t-0_5">
-                        <div className="col-2">
-                          <div className="rectangle-h"></div>
+                        <div className="d-f a-i-c">
+                          <div className="">
+                            <div className="rectangle-h"></div>
+                          </div>
+                          &nbsp;
+                          <div className="">
+                            <span className="font-f">Heavy</span>{" "}
+                          </div>
                         </div>
-                        <div className="col-8">
-                          {" "}
-                          <span className="font-f">Heavy</span>
-                        </div>{" "}
-                        <div className="col-2">
-                          {" "}
+                        <div className="">
                           <span className="f-r font-f">2</span>
                         </div>
                       </div>
                       <div className="d-f j-c-s-b m-t-0_5">
-                        <div className="col-2">
-                          <div className="rectangle-m"></div>
+                        <div className="d-f a-i-c">
+                          <div className="">
+                            <div className="rectangle-m"></div>
+                          </div>
+                          &nbsp;
+                          <div className="">
+                            <span className="font-f">Master</span>{" "}
+                          </div>
                         </div>
-                        <div className="col-8">
-                          {" "}
-                          <span className="font-f">Master</span>
-                        </div>{" "}
-                        <div className="col-2">
-                          {" "}
+                        <div className="">
                           <span className="f-r font-f">2</span>
                         </div>
                       </div>
-                      <div className="d-f j-c-s-b m-t-0_5">
-                        <div className="col-2">
+                      <div className="d-f j-c-s-b m-t-0_5 m-q-b-d-n">
+                      <div className="d-f a-i-c">
+                        <div className="">
                           <div className="rectangle-ep"></div>
                         </div>
-                        <div className="col-8">
-                          <span className="font-f">Executive Project </span>
-                        </div>{" "}
-                        <div className="col-2">
-                          {" "}
-                          <span className="f-r font-f">2</span>
+                        &nbsp;
+                        <div className="">
+                          <span className="font-f">Executive Project</span>{" "}
                         </div>
                       </div>
-                      <div className="d-f j-c-s-b m-t-0_5">
-                        <div className="col-2">
-                          <div className="rectangle-em"></div>
-                        </div>
-                        <div className="col-8">
-                          <span className="font-f">Executive Master</span>{" "}
-                        </div>{" "}
-                        <div className="col-2">
-                          <span className="f-r font-f">2</span>
-                        </div>
+                      <div className="">
+                        <span className="f-r font-f">2</span>
                       </div>
+                    </div>
+                    <div className="d-f j-c-s-b m-t-0_5 m-q-b-d-n">
+                    <div className="d-f a-i-c">
+                      <div className="">
+                        <div className="rectangle-em"></div>
+                      </div>
+                      &nbsp;
+                      <div className="">
+                        <span className="font-f">Executive Master</span>{" "}
+                      </div>
+                    </div>
+                    <div className="">
+                      <span className="f-r font-f">2</span>
+                    </div>
+                  </div>
+                    </div>
+                    <div className="d-f m-t-2">
+                      <GrAddCircle className="gr-icon" />
+                      <div className="m-l-0_5 font-f">Create New Node</div>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="col-lg-8 col-md-12 col-sm-12 col-12 perfo  m-y-1">
-                <div className="dashboard__box-perfomance pa-1">
-                
-
+                <div className="dashboard__box-perfomance pa-1 h-100">
                   <div className="row">
-                    <div className="col-12 col-sm-12 col-md-12 col-lg-8">
-                    <div className="font-f f-s-1_5 ">Performance</div>
+                    <div className="col-6 col-sm-6 col-md-6 col-lg-8">
+                      <div className="font-f f-s-1_5 ">Performance</div>
                       <div className="m-t-3 b-c-t">
                         <Donut_Chart />
                       </div>
                     </div>
-                    <div className="col-12 col-sm-12 col-md-12 col-lg-4">
-                      <Datetabs />
-                      <div className="t-a-c">
+                    <div className="col-6 col-sm-6 col-md-6 col-lg-4">
+                      <div className="m-q-b-d-n">
+                        <Datetabs />
+                      </div>
+                      <div className="m-q-a-d-n">    <Datetabs1 /></div>
+                      <div className="t-a-c m-q-t-a-l">
                         <div className="font-f f-s-1_3">Monthly</div>
                         <div className="font-f m-t-0_5">$17,089.33</div>
                         <div className="m-t-1 m-b-1">
@@ -301,10 +322,9 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-        
-   
+
               <div className="col-lg-9 col-md-12 col-sm-12 col-12 section-port  m-y-1">
-                <div className="dashboard__box-total pa-2 ">
+                <div className="dashboard__box-total h-100 pa-2 ">
                   <div className="font-f f-s-2">Portfolio</div>
                   <div className="row m-t-1">
                     <div className="col-lg-2 col-md-2 col-sm-2 col-2">
@@ -330,7 +350,7 @@ export default function Dashboard() {
                       </div>
                     </div>
                     <div className="col-lg-2 col-md-2 col-sm-2 col-2">
-                      <div className="d-f">
+                      <div className="d-f a-i-c">
                         <span className="font-f f-s-0_8 d-f a-i-c">2</span>
                         <span className="m-l-0_5">
                           <IoIosAddCircleOutline className="mini-node-icons  f-w-600" />
@@ -369,7 +389,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="col-lg-9 col-md-12 col-sm-12 col-12 section-port-two  m-y-1">
-                <div className="section-dashboard pa-1">
+                <div className="section-dashboard h-100 pa-1">
                   <div className="d-f j-c-s-b">
                     <div className="font-f f-s-1_5 gray-clr">Portfolio</div>
                     <div className="tab-sec ">
@@ -405,7 +425,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="col-lg-3 col-md-12 col-sm-12 col-12  m-y-1">
-                <div className="dashboard__box-total pa-1">
+                <div className="dashboard__box-total pa-1 h-100">
                   <div className="font-f f-s-1_3">Activate New Node</div>
                   <div className="row m-t-1">
                     <div className="col-2">

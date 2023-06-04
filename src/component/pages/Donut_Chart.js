@@ -12,14 +12,25 @@ const AreaChartComponent = () => {
   ];
 
   return (
-    <AreaChart width={350} height={200} data={data} className='b-c-t' >
+    <div>
+      <div className='m-q-b-d-n'><AreaChart width={350} height={200} data={data} className='b-c-t' >
       <CartesianGrid strokeDasharray="3 3" />
       <XAxis dataKey="name" />
       <YAxis />
       <Tooltip />
   
       <Area type="monotone" dataKey="data" stroke="#8884d8" fill="#492f4d" />
-    </AreaChart>
+      </AreaChart></div>
+      <div className='m-q-a-d-n'><AreaChart width={150} height={200} data={data} className='b-c-t' >
+      <CartesianGrid strokeDasharray="3 3" />
+      <XAxis dataKey="name" />
+      <YAxis />
+      <Tooltip />
+  
+      <Area type="monotone" dataKey="data" stroke="#8884d8" fill="#492f4d" />
+      </AreaChart></div>
+    
+      </div>
   );
 };
 

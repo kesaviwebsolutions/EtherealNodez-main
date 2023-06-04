@@ -56,3 +56,33 @@ svg.recharts-surface{
 .ant-tabs-tab{
     color: var(--color) !important;
 }
+.s-f-s-2{
+    font-size: 1.5rem !important;
+}
+@media screen and (max-width:1200px) {
+    .s-f-s-2{
+        font-size: 1.5rem !important;
+    }
+}
+@media screen and (max-width:900px) {
+    .s-f-s-2{
+        font-size: 1rem !important;
+    }
+}
+.s-f-s-3{
+    font-size:3rem !important;
+}
+@media screen and (max-width:1200px) {
+    .s-f-s-3{
+        font-size: 2rem !important;
+    }
+}
+@media screen and (max-width:900px) {
+    .s-f-s-3{
+        font-size: 2rem !important;
+    }
+    .m-q-t-a-l{
+        text-align: left !important;
+    }
+}
+ 
