@@ -170,8 +170,8 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="row m-t-2">
+           
+       
               <div className="col-lg-4 col-md-12 col-sm-12 col-12">
                 <div className="dashboard__box-total pa-1">
                   <div className="row">
@@ -301,8 +301,8 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="row m-t-2 m-b-4">
+        
+   
               <div className="col-lg-9 col-md-9 col-sm-12 col-12 section-port">
                 <div className="dashboard__box-total pa-2 ">
                   <div className="font-f f-s-2">Portfolio</div>
