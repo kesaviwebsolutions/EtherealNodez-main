@@ -31,10 +31,10 @@ export default function SideNavbar() {
 
   useLayoutEffect(() => {
     const data = window.localStorage.getItem("theme");
-    if (data === "dark-theme") {
-      setTheme("dark-theme");
-    } else {
+    if (data === "light-theme") {
       setTheme("light-theme");
+    } else {
+      setTheme("dark-theme");
     }
   }, []);
 
@@ -144,12 +144,12 @@ export default function SideNavbar() {
                   <ul className="l-s-t-n">
                     <li>
                     {theme != "dark-theme" ? (
-                      <span onClick={() => toggleThemedark()} className="">
-                        <FaMoon  className="f-s-1_5"  />
+                      <span onClick={() => toggleThemedark()} className=" f-w-600 f-s-1_25 f-f-int c-p">
+                        <FaMoon  className="f-s-1_5 b-c-t"  /> Night
                       </span>
                     ) : (
-                      <span onClick={() => toggleThemelight()} className="">
-                      <FaSun className="f-s-1_5" />
+                      <span onClick={() => toggleThemelight()} className=" f-w-600 f-s-1_25 f-f-int c-p">
+                      <FaSun className="f-s-1_5 b-c-t" /> Light
                       </span>
                     )}
                     </li>
