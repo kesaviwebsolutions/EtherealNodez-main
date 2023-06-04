@@ -1,5 +1,6 @@
 import { Tabs } from "antd";
 import React from "react";
+import { AiOutlineCalendar } from "react-icons/ai";
 
 export default function Datetabs() {
   const onChange = (key) => {
@@ -30,7 +31,16 @@ export default function Datetabs() {
   return (
     <div>
       {" "}
-      <Tabs defaultActiveKey="1" items={items} onChange={onChange} />
+      <div>
+      <div className="d-f a-i-c f-f-int m-b-2">
+        <div className="m-l-0_5 f-f-int">1D</div>
+        
+        <div className="m-l-0_5 f-f-int">1W</div>
+        <div className="high_light m-l-0_5 f-f-int">1M</div>
+        <div className="m-l-0_5 f-f-int">1Y</div>
+        <div className="m-l-0_5 f-f-int"><AiOutlineCalendar className="f-s-1_5" /></div>
+      </div>
+    </div>
     </div>
   );
 }

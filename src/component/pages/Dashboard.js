@@ -292,13 +292,13 @@ export default function Dashboard() {
               <div className="col-lg-8 col-md-12 col-sm-12 col-12 perfo  m-y-1">
                 <div className="dashboard__box-perfomance pa-1 h-100">
                   <div className="row">
-                    <div className="col-6 col-sm-6 col-md-6 col-lg-8">
+                    <div className="col col-sm-6 col-md-6 col-lg-8">
                       <div className="font-f f-s-1_5 ">Performance</div>
                       <div className="m-t-3 b-c-t">
                         <Donut_Chart />
                       </div>
                     </div>
-                    <div className="col-6 col-sm-6 col-md-6 col-lg-4">
+                    <div className="col col-sm-6 col-md-6 col-lg-4">
                       <div className="m-q-b-d-n">
                         <Datetabs />
                       </div>
