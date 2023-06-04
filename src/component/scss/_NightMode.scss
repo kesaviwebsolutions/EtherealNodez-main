@@ -54,3 +54,13 @@ a.nav_link li:hover {
 .dropdown-item:hover, .dropdown-item:focus{
     background-color: var(--primary_bg) !important;
 }
+:where(.css-k7429z).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+    color: var(--color) !important;
+    border-radius: 5px !important;
+    padding: 2px !important;
+    background: #6c728d !important;
+    text-shadow: 0 0 0.25px currentcolor !important;
+}
+:where(.css-k7429z).ant-tabs-top >.ant-tabs-nav::before, :where(.css-k7429z).ant-tabs-bottom >.ant-tabs-nav::before, :where(.css-k7429z).ant-tabs-top >div>.ant-tabs-nav::before, :where(.css-k7429z).ant-tabs-bottom >div>.ant-tabs-nav::before{
+    border: none !important;
+}
