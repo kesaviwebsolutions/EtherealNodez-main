@@ -25,7 +25,7 @@ export default function Dashboard() {
         <Grid item xs={12} sm={12} md={12} lg={9} className="">
           <div className="container-kws">
           <div className="row m-t-2">
-            <div className="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="col-lg-4 col-md-6 col-sm-6 col-6">
               <div className="dashboard">
                 <div className="dashboard__box pa-1">
                   <div className="d-f j-c-s-b">
@@ -62,7 +62,7 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="col-lg-4 col-md-6 col-sm-6 col-6">
               <div className="dashboard">
                 <div className="dashboard__box pa-1">
                   <div className="d-f j-c-s-b">
@@ -99,7 +99,7 @@ export default function Dashboard() {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6 col-sm-12 col-12">
+            <div className="col-lg-4 col-md-6 col-sm-6 col-6">
               <div className="dashboard">
                 <div className="dashboard__box pa-1">
                   <div className="d-f j-c-s-b">

@@ -4,22 +4,29 @@
     padding: 30px 20px;
     flex-shrink: 0;
     height: 100vh;
-    overflow: visible;
-    position: sticky;
+    overflow: visible !important;
+    position: sticky !important;
     top: 0;
 &__inner{
     height: 100%;
     display: flex;
     flex-direction: column;
 }
-    &__tabs{
-        background: var(--second_bg) !important;
-    border-radius: 10px !important;
-    display: block;
-    }
+    // &__tabs{
+    //     background: var(--second_bg) !important;
+    // border-radius: 10px !important;
+    // display: block;
+    // }
    
 }
-
+a:active{
+    background: var(--second_bg) !important;
+    border-radius: 10px !important;
+    display: block;
+}
+a:hover{
+    text-decoration: none;
+}
 .side-bg{
     // padding: 1px !important;
     margin-right: 30px !important;
