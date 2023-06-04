@@ -75,13 +75,13 @@ export default function Node() {
           </div>
             <div className="dashboard__box m-t-2">
               <div className="pa-1">
-                <div className="font-f f-s-1_3">Pending Withdrwals</div>
+                <div className="font-f f-s-1_3">Node</div>
                 <div className="row box-co m-t-2">
                   <div className="col-lg-4 col-md-4 col-sm-4 col-4">
-                    <p className="font-f f-s-1_3">Account</p>
+                    <p className="font-f f-s-1_3">Name</p>
                   </div>
                   <div className="col-lg-6 col-md-6 col-sm-6 col-6">
-                    <p className="font-f f-s-1_3">Earnings</p>
+                    <p className="font-f f-s-1_3">Mining Rate</p>
                   </div>
                 </div>
                 <div className="row m-t-1">
