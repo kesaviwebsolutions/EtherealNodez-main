@@ -10,13 +10,15 @@ import Chart from "./Chart";
 import { GrAddCircle } from "react-icons/gr";
 import Datetabs from "./Dashboardfiles/Datetabs";
 import Datetabs1 from "./Dashboardfiles/Datetabs1";
-import BsFillMoonFill from "react-icons/bs";
+import BsFillMoonFill, { BsCircleFill } from "react-icons/bs";
 import mini from "../Image/G1.png";
 import mini2 from "../Image/G2.png";
 import mini3 from "../Image/G3.png";
 import mini4 from "../Image/G4.png";
 import Form from "react-bootstrap/Form";
 import DarkMode from "./DarkMode";
+import { TbBrandPrisma } from "react-icons/tb";
+import { GiPodiumWinner } from "react-icons/gi";
 
 export default function Dashboard() {
   // ---------dark---------mode----------------
@@ -29,9 +31,9 @@ export default function Dashboard() {
       setTheme("light-theme");
     }
   }, []);
-  
+
   const [theme, setTheme] = useState("light-theme"); // Change the initial state value
-  
+
   const toggleThemelight = () => {
     theme === "dark-theme" ? setTheme("light-theme") : setTheme("dark-theme");
     window.localStorage.setItem(
@@ -39,7 +41,7 @@ export default function Dashboard() {
       theme === "dark-theme" ? "light-theme" : "dark-theme"
     );
   };
-  
+
   const toggleThemedark = () => {
     theme === "dark-theme" ? setTheme("dark-theme") : setTheme("dark-theme");
     window.localStorage.setItem(
@@ -47,12 +49,11 @@ export default function Dashboard() {
       theme === "dark-theme" ? "dark-theme" : "dark-theme"
     );
   };
-  
+
   useEffect(() => {
     document.body.className = theme;
   }, [theme]);
-  
-  
+
   return (
     <div className="">
       <Grid container>
@@ -378,9 +379,9 @@ export default function Dashboard() {
               </div>
 
               <div className="col-lg-9 col-md-12 col-sm-12 col-12 section-port  m-y-1">
-                <div className="dashboard__box-total h-100 pa-2 ">
+                <div className="dashboard__box-total  pa-2 ">
                   <div className="font-f f-s-2">Portfolio</div>
-                  <div className="row m-t-1">
+                  <div className="row m-t-1 bg-clr-linear p-y-0_5 b-r-5">
                     <div className="col">
                       <div className="font-f">Name</div>
                     </div>
@@ -403,7 +404,8 @@ export default function Dashboard() {
                           <div className="">
                             {" "}
                             <span className="">
-                              <img src={mini} alt="" className="w-1_25" />&nbsp;&nbsp;
+                              <img src={mini} alt="" className="w-1_25" />
+                              &nbsp;&nbsp;
                             </span>
                             &nbsp;
                           </div>
@@ -418,13 +420,13 @@ export default function Dashboard() {
                       <div className="d-f a-i-c">
                         <span className="font-f  d-f a-i-c">2</span>
                         <span className="m-l-0_5">
-                          <IoIosAddCircleOutline className="mini-node-icons  f-w-600" />
+                          <IoIosAddCircleOutline className="mini-node-icons  f-w-600 f-s-1_5" />
                         </span>
                       </div>
                     </div>
                     <div className="col">
                       <div>
-                        <span className="font-f ">0.002</span>
+                        <span className="font-f m-r-0_5">0.002</span>
                         <span className="font-f ">2 REAL</span>
                         <span></span>
                       </div>
@@ -432,35 +434,85 @@ export default function Dashboard() {
 
                     <div className="col">
                       <div className="d-f ">
-                        <span className="font-f  ">
-                          $1,780.12
-                        </span>
-                       
+                        <span className="font-f  ">$1,780.12</span>
                       </div>
                     </div>
                     <div className="col">
-                    <div className="">
-                    
-                      <span>
-                        <FaExchangeAlt className=" mini-node-icons-ex m-r-0_5" />
-                      </span>
-                      <span className="font-f  m-r-0_5">0.230</span>
-                      <span className="font-f ">2REAL</span>
+                      <div className="">
+                        <span>
+                          <FaExchangeAlt className=" mini-node-icons-ex m-r-0_5 f-v" />
+                        </span>
+                        <span className="font-f  m-r-0_5">0.230</span>
+                        <span className="font-f ">2REAL</span>
+                      </div>
                     </div>
-                  </div>
 
                     <div className="col">
                       <span className="">
-                        <button className="font-f  detail">
-                          Details
-                        </button>
+                        <button className="font-f  detail">Details</button>
+                      </span>
+                    </div>
+                  </div>
+                  <div className="row m-t-1">
+                    <div className="col">
+                      <div>
+                        <div className="d-f a-i-c">
+                          <div className="">
+                            {" "}
+                            <span className="">
+                              <img src={mini} alt="" className="w-1_25" />
+                              &nbsp;&nbsp;
+                            </span>
+                            &nbsp;
+                          </div>
+                          <div className="">
+                            {" "}
+                            <span className="font-f ">Mini Node</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="d-f a-i-c">
+                        <span className="font-f  d-f a-i-c">2</span>
+                        <span className="m-l-0_5">
+                          <IoIosAddCircleOutline className="mini-node-icons  f-w-600 f-s-1_5 " />
+                        </span>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div>
+                        <span className="font-f m-r-0_5">0.002</span>
+                        <span className="font-f ">2 REAL</span>
+                        <span></span>
+                      </div>
+                    </div>
+
+                    <div className="col">
+                      <div className="d-f ">
+                        <span className="font-f  ">$1,780.12</span>
+                      </div>
+                    </div>
+                    <div className="col">
+                      <div className="">
+                        <span>
+                          <FaExchangeAlt className=" mini-node-icons-ex m-r-0_5 f-v" />
+                        </span>
+                        <span className="font-f  m-r-0_5">0.230</span>
+                        <span className="font-f ">2REAL</span>
+                      </div>
+                    </div>
+
+                    <div className="col">
+                      <span className="">
+                        <button className="font-f  detail">Details</button>
                       </span>
                     </div>
                   </div>
                 </div>
               </div>
               <div className="col-lg-9 col-md-12 col-sm-12 col-12 section-port-two  m-y-1">
-                <div className="section-dashboard h-100 pa-1">
+                <div className="section-dashboard  pa-1">
                   <div className="d-f j-c-s-b">
                     <div className="font-f f-s-1_5 gray-clr">Portfolio</div>
                     <div className="tab-sec ">
@@ -495,119 +547,158 @@ export default function Dashboard() {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-3 col-md-12 col-sm-12 col-12  m-y-1">
-                <div className="dashboard__box-total pa-1 h-100">
-                  <div className="font-f f-s-1_3">Activate New Node</div>
-                  <div className="row m-t-1">
-                    <div className="col-2">
-                      <span>
-                        <img src={mini} alt="" className="cir-img" />
-                      </span>
-                    </div>
-                    <div className="col-8">
-                      {" "}
-                      <div className="font-f ">Mini Node</div>
-                    </div>
-                    <div className="col-2">
-                      <span className="f-r">
-                        {" "}
-                        <Form>
-                          {["radio"].map((type) => (
-                            <div key={`default-${type}`} className="mb-3">
-                              <Form.Check // prettier-ignore
-                                type={type}
-                                id={`default-${type}`}
-                                label={``}
-                              />
-                            </div>
-                          ))}
-                        </Form>
-                      </span>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-2">
-                      <span>
-                        <img src={mini} alt="" className="cir-img" />
-                      </span>
-                    </div>
-                    <div className="col-8">
-                      {" "}
-                      <div className="font-f ">Standard Node</div>
-                    </div>
-                    <div className="col-2">
-                      <span className="f-r">
-                        {" "}
-                        <Form>
-                          {["radio"].map((type) => (
-                            <div key={`default-${type}`} className="mb-3">
-                              <Form.Check // prettier-ignore
-                                type={type}
-                                id={`default-${type}`}
-                                label={``}
-                              />
-                            </div>
-                          ))}
-                        </Form>
-                      </span>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-2">
-                      <span>
-                        <img src={mini} alt="" className="cir-img" />
-                      </span>
-                    </div>
-                    <div className="col-8">
-                      {" "}
-                      <div className="font-f ">Heavy Node</div>
-                    </div>
-                    <div className="col-2">
-                      <span className="f-r">
-                        {" "}
-                        <Form>
-                          {["radio"].map((type) => (
-                            <div key={`default-${type}`} className="mb-3">
-                              <Form.Check // prettier-ignore
-                                type={type}
-                                id={`default-${type}`}
-                                label={``}
-                              />
-                            </div>
-                          ))}
-                        </Form>
-                      </span>
-                    </div>
-                  </div>
-                  <div className="row">
-                    <div className="col-2">
-                      <span>
-                        <img src={mini} alt="" className="cir-img" />
-                      </span>
-                    </div>
-                    <div className="col-8">
-                      {" "}
-                      <div className="font-f ">Master Node</div>
-                    </div>
-                    <div className="col-2">
-                      <span className="f-r">
-                        {" "}
-                        <Form>
-                          {["radio"].map((type) => (
-                            <div key={`default-${type}`} className="mb-3">
-                              <Form.Check // prettier-ignore
-                                type={type}
-                                id={`default-${type}`}
-                                label={``}
-                              />
-                            </div>
-                          ))}
-                        </Form>
-                      </span>
-                    </div>
-                  </div>
+              <div className="col-lg-3 col-md-12 col-sm-12 col-12  ">
+              <div className="dashboard__box-total pa-1 m-t-1">
+              <div className="font-f f-s-1_3">Activate New Node</div>
+              <div className="row m-t-1">
+                <div className="col-2">
+                  <span>
+                    <img src={mini} alt="" className="cir-img" />
+                  </span>
+                </div>
+                <div className="col-8">
+                  {" "}
+                  <div className="font-f ">Mini Node</div>
+                </div>
+                <div className="col-2">
+                  <span className="f-r">
+                    {" "}
+                    <Form>
+                      {["radio"].map((type) => (
+                        <div key={`default-${type}`} className="m-b-0_5">
+                          <Form.Check // prettier-ignore
+                            type={type}
+                            id={`default-${type}`}
+                            label={``}
+                          />
+                        </div>
+                      ))}
+                    </Form>
+                  </span>
                 </div>
               </div>
+              <div className="row">
+                <div className="col-2">
+                  <span>
+                    <img src={mini} alt="" className="cir-img" />
+                  </span>
+                </div>
+                <div className="col-8">
+                  {" "}
+                  <div className="font-f ">Standard Node</div>
+                </div>
+                <div className="col-2">
+                  <span className="f-r">
+                    {" "}
+                    <Form>
+                      {["radio"].map((type) => (
+                        <div key={`default-${type}`} className="m-b-0_5">
+                          <Form.Check // prettier-ignore
+                            type={type}
+                            id={`default-${type}`}
+                            label={``}
+                          />
+                        </div>
+                      ))}
+                    </Form>
+                  </span>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-2">
+                  <span>
+                    <img src={mini} alt="" className="cir-img" />
+                  </span>
+                </div>
+                <div className="col-8">
+                  {" "}
+                  <div className="font-f ">Heavy Node</div>
+                </div>
+                <div className="col-2">
+                  <span className="f-r">
+                    {" "}
+                    <Form>
+                      {["radio"].map((type) => (
+                        <div key={`default-${type}`} className="m-b-0_5">
+                          <Form.Check // prettier-ignore
+                            type={type}
+                            id={`default-${type}`}
+                            label={``}
+                          />
+                        </div>
+                      ))}
+                    </Form>
+                  </span>
+                </div>
+              </div>
+              <div className="row">
+                <div className="col-2">
+                  <span>
+                    <img src={mini} alt="" className="cir-img" />
+                  </span>
+                </div>
+                <div className="col-8">
+                  {" "}
+                  <div className="font-f ">Master Node</div>
+                </div>
+                <div className="col-2">
+                  <span className="f-r">
+                    {" "}
+                    <Form>
+                      {["radio"].map((type) => (
+                        <div key={`default-${type}`} className="m-b-0_5">
+                          <Form.Check // prettier-ignore
+                            type={type}
+                            id={`default-${type}`}
+                            label={``}
+                          />
+                        </div>
+                      ))}
+                    </Form>
+                  </span>
+                </div>
+              </div>
+              <div className="m-y-1 ">
+                <div className="d-f a-i-c j-c-s-b p-x-1 p-y-0_5 b-r-5 b-c-b c-w">
+                  <div className="font-f">$450.00</div>
+                  <div className="">
+                    {" "}
+                    <FaExchangeAlt className="  m-r-0_5 f-v" />
+                  </div>
+                  <div className="font-f">0.241 2REAL</div>
+                </div>
+              </div>
+              <div className="m-y-1">
+                <button className="w-100 b-n font-f button-clr-linear c-w p-y-0_5 b-r-5">Buy Now</button>
+              </div>
+                </div>
+                <div className="dashboard__box-total pa-1 m-t-2 m-b-4">
+                <div className="font-f f-s-1_3"><GiPodiumWinner className="f-s-1_5 b-c-t" />&nbsp;  Top Earners</div>
+                  <div className="d-f a-i-c j-c-s-b m-y-0_5">
+                    <div className="f-p"><BsCircleFill className="f-p f-s-1_25"/></div>
+                    <div className="font-f">0xa05..Ba2c</div>
+                    <div className="font-f">26</div>
+                    <div className="f-p"><TbBrandPrisma className="f-p f-s-1_25" /></div>
+                  </div>
+                  <div className="d-f a-i-c j-c-s-b m-y-0_5">
+                  <div className="f-p"><BsCircleFill className="f-v f-s-1_25"/></div>
+                  <div className="font-f">0xa05..Ba2c</div>
+                  <div className="font-f">26</div>
+                  <div className="f-p"><TbBrandPrisma className="f-v f-s-1_25" /></div>
+                  </div>
+                  <div className="d-f a-i-c j-c-s-b m-y-0_5">
+                  <div className="f-p"><BsCircleFill className="f-green f-s-1_25"/></div>
+                  <div className="font-f">0xa05..Ba2c</div>
+                  <div className="font-f">26</div>
+                  <div className="fill-green"><TbBrandPrisma className="f-green f-s-1_25" /></div>
+                </div>
+             
+                <div className="m-y-1">
+                  <button className="w-100 b-n font-f button-clr-linear c-w p-y-0_5 b-r-5">Buy Now</button>
+                </div>
+              </div>
+              </div>
+              
 
               <div></div>
             </div>

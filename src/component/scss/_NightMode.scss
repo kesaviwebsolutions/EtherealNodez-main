@@ -1,23 +1,27 @@
-
-
 .dark-theme {
     --background-color: #19171c;
     --color: white;
-    --primary_bg:#201e24;
-    --second_bg:#6C728D; 
-    --highlight:#6d738d;
-    --gray-clr:#aca9a9;
-
+    --primary_bg: #201e24;
+    --second_bg: #6c728d;
+    --highlight: #6d738d;
+    --gray-clr: #aca9a9;
+    --black_linear1: #161420;
+    --black_linear2: #1b1a20;
+    --button_linear1: #8b1e6f;
+    --button_linear2: #706789;
 }
 
 .light-theme {
     --background-color: white;
     --color: rgb(18, 18, 18);
-    --primary_bg:#f3f3f3;
-    --second_bg:#c2c7df; 
-    --highlight:#b6c0ec;
-    --gray-clr:#aca9a9;
-    
+    --primary_bg: #f3f3f3;
+    --second_bg: #c2c7df;
+    --highlight: #b6c0ec;
+    --gray-clr: #aca9a9;
+    --black_linear2: #f3f3f3;
+    --black_linear1: #b7c4f4;
+    --button_linear1: #8b1e6f;
+    --button_linear2: #706789;
 }
 
 html,
@@ -27,7 +31,9 @@ select,
 #dropdown,
 .modal-content,
 .pa-1.offcanvas.offcanvas-start.show,
-svg ,.dropdown-menu.show , .btn-success{
+svg,
+.dropdown-menu.show,
+.btn-success {
     background-color: var(--background-color) !important;
     color: var(--color) !important;
     fill: var(--color) !important;
@@ -35,33 +41,53 @@ svg ,.dropdown-menu.show , .btn-success{
 }
 
 a.nav_link.active li {
-    background:var(--highlight) !important;
+    background: var(--highlight) !important;
     border-radius: 5px !important;
 }
 a.nav_link li:hover {
-    background:var(--highlight) !important;
+    background: var(--highlight) !important;
     border-radius: 5px !important;
 }
 
-.bgs-primary{
+.bgs-primary {
     background-color: var(--primary_bg) !important;
 }
-.gray-clr{
+.gray-clr {
     color: var(--gray-clr) !important;
 }
-.f-g{
-    fill:#00e900 !important;
+.f-g {
+    fill: #00e900 !important;
 }
-.dropdown-item:hover, .dropdown-item:focus{
+.dropdown-item:hover,
+.dropdown-item:focus {
     background-color: var(--primary_bg) !important;
 }
-:where(.css-k7429z).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn{
+:where(.css-k7429z).ant-tabs .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
     color: var(--color) !important;
     border-radius: 5px !important;
     padding: 2px !important;
     background: #6c728d !important;
     text-shadow: 0 0 0.25px currentcolor !important;
 }
-:where(.css-k7429z).ant-tabs-top >.ant-tabs-nav::before, :where(.css-k7429z).ant-tabs-bottom >.ant-tabs-nav::before, :where(.css-k7429z).ant-tabs-top >div>.ant-tabs-nav::before, :where(.css-k7429z).ant-tabs-bottom >div>.ant-tabs-nav::before{
+:where(.css-k7429z).ant-tabs-top > .ant-tabs-nav::before,
+:where(.css-k7429z).ant-tabs-bottom > .ant-tabs-nav::before,
+:where(.css-k7429z).ant-tabs-top > div > .ant-tabs-nav::before,
+:where(.css-k7429z).ant-tabs-bottom > div > .ant-tabs-nav::before {
     border: none !important;
+}
+
+.bg-clr-linear {
+    background: linear-gradient(var(--black_linear2), var(--black_linear1));
+}
+.button-clr-linear {
+    background: linear-gradient(var(--button_linear2), var(--button_linear1));
+}
+.f-v{
+    fill:#b7c4f4 !important;
+}
+.f-p{
+    fill: #b717b9 !important;
+}
+.f-green{
+    fill:#489c87 !important;
 }

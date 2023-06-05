@@ -38,7 +38,7 @@ export default function Datetabs() {
         <div className="m-l-0_5 f-f-int">1W</div>
         <div className="high_light m-l-0_5 f-f-int">1M</div>
         <div className="m-l-0_5 f-f-int">1Y</div>
-        <div className="m-l-0_5 f-f-int"><AiOutlineCalendar className="f-s-1_5" /></div>
+        <div className="m-l-0_5 f-f-int"><AiOutlineCalendar className="f-s-1_5 b-c-t" /></div>
       </div>
     </div>
     </div>
